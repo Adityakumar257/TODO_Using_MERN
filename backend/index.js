@@ -22,9 +22,10 @@ mongoose.connect(process.env.MONGO_URI)
   });
 
 const JWT_SECRET = process.env.JWT_SECRET;
-// Root Route
+
+// ✅ Root Route (Health Check)
 app.get("/", (req, res) => {
-  res.send("API is running ✅");
+  res.send("✅ Backend API is running successfully.");
 });
 
 // User Registration
